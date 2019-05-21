@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+  <table>
+    <tr>
+      <td>codice prenotazione</td>
+      <td>codice cliente</td>
+      <td>lezione o no </td>
+      <td>nome del campo campo</td>
+      <td>data prenotazione</td>
+      <td>data effetuazione</td>
+      <td>costo prenotazione</td>
+      <td>pagato o no </td>
+      <td>luci</td>
+      <td>note</td>
+    </tr>
+    <tr>
+      <td>{{reservation.CodPrenotazione }}</td>
+      <td>{{reservation.CodCliente}}</td>
+      <td>{{reservation.Lezione}}</td>
+      <td>{{reservation.NomeCampo}}</td>
+      <td>{{reservation.DataP |date: 'medium'}}</td>
+      <td>{{reservation.DataEff |date: 'medium'}}</td>
+      <td>{{reservation.CostoP}}</td>
+      <td>{{reservation.Pagato}}</td>
+      <td>{{reservation.Luci}}</td>
+      <td>{{reservation.Note}}</td>
+    </tr>
+  </table>

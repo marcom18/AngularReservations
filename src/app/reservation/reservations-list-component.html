@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  
+    <table>
+      <tr>
+        <td>codice prenotazione</td>
+        <td>codice cliente</td>
+        <td>lezione o no </td>
+        <td>nome del campo campo</td>
+        <td>data prenotazione</td>
+        <td>data effetuazione</td>
+        <td>costo prenotazione</td>
+        <td>pagato o no </td>
+        <td>luci</td>
+        <td>note</td>
+        <td>\</td>
+      </tr>
+      <tr *ngFor= 'let p of prenotazioni'>
+      <td>
+      
+          {{p.CodPrenotazione}}
+        
+      </td>
+      <td>{{p.CodCliente}}</td>
+      <td>{{p.Lezione}}</td>
+      <td>{{p.NomeCampo}}</td>
+      <td>{{p.DataP |date: 'medium'}}</td>
+      <td>{{p.Data_eff |date: 'medium'}}</td>
+      <td>{{p.CostoP}}</td>
+      <td>{{p.Pagato}}</td>
+      <td>{{p.Luci}}</td>
+      <td>{{p.Note}}</td>
+      <td><a [routerLink]="['/reservations',p.CodPrenotazione]">SHOW DETAIL</a></td>
+      </tr>
+    </table>
